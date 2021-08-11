@@ -1,0 +1,568 @@
+# Compsitional Reasoning with AGREE
+@InProceedings{10.1007/978-3-642-28891-3_13,
+author="Cofer, Darren
+and Gacek, Andrew
+and Miller, Steven
+and Whalen, Michael W.
+and LaValley, Brian
+and Sha, Lui",
+editor="Goodloe, Alwyn E.
+and Person, Suzette",
+title="Compositional Verification of Architectural Models",
+booktitle="NASA Formal Methods",
+year="2012",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="126--140",
+abstract="This paper describes a design flow and supporting tools to significantly improve the design and verification of complex cyber-physical systems. We focus on system architecture models composed from libraries of components and complexity-reducing design patterns having formally verified properties. This allows new system designs to be developed rapidly using patterns that have been shown to reduce unnecessary complexity and coupling between components. Components and patterns are annotated with formal contracts describing their guaranteed behaviors and the contextual assumptions that must be satisfied for their correct operation. We describe the compositional reasoning framework that we have developed for proving the correctness of a system design, and provide a proof of the soundness of our compositional reasoning approach. An example based on an aircraft flight control system is provided to illustrate the method and supporting analysis tools.",
+isbn="978-3-642-28891-3"
+}
+
+@article{10.1145/2658982.2527272,
+author = {Murugesan, Anitha and Whalen, Michael W. and Rayadurgam, Sanjai and Heimdahl, Mats P.E.},
+title = {Compositional Verification of a Medical Device System},
+year = {2013},
+issue_date = {December 2013},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {33},
+number = {3},
+issn = {1094-3641},
+url = {https://doi.org/10.1145/2658982.2527272},
+doi = {10.1145/2658982.2527272},
+abstract = {Complex systems are by necessity hierarchically organized. Decomposition into subsystems allows for intellectual control, as well as enabling different subsystems to be created by distinct teams. This decomposition affects both requirements and architecture. The architecture describes the structure and this affects how requirements ``flow down'' to each subsystem. Moreover, discoveries in the design process may affect the requirements. Demonstrating that a complex system satisfies its requirements when the subsystems are composed is a challenging problem.In this paper, we present a medical device case example where we apply an iterative approach to architecture and verification based on software architectural models. We represent the hierarchical composition of the system in the Architecture Analysis and Design Language (AADL), and use an extension to the AADL language to describe the requirements at different levels of abstraction for compositional verification. The component-level behavior for the model is described in Simulink/Stateflow. We assemble proofs of system level properties by using the Simulink Design Verifier to establish component-level properties and an open-source plug-in for the OSATE AADL environment to perform the compositional verification of the architecture. This combination of verification tools allows us to iteratively explore design and verification of detailed behavioral models, and to scale formal analysis to large software systems.},
+journal = {Ada Lett.},
+month = nov,
+pages = {51–64},
+numpages = {14},
+keywords = {system decomposition, cyber physical systems, compositional verification}
+}
+
+@InProceedings{10.1007/978-3-319-17524-9_7,
+author="Backes, John
+and Cofer, Darren
+and Miller, Steven
+and Whalen, Michael W.",
+editor="Havelund, Klaus
+and Holzmann, Gerard
+and Joshi, Rajeev",
+title="Requirements Analysis of a Quad-Redundant Flight Control System",
+booktitle="NASA Formal Methods",
+year="2015",
+publisher="Springer International Publishing",
+address="Cham",
+pages="82--96",
+abstract="In this paper we detail our effort to formalize and prove requirements for the Quad-redundant Flight Control System (QFCS) within NASA's Transport Class Model (TCM). We use a compositional approach with assume-guarantee contracts that correspond to the requirements for software components embedded in an AADL system architecture model. This approach is designed to exploit the verification effort and artifacts that are already part of typical software verification processes in the avionics domain. Our approach is supported by an AADL annex that allows specification of contracts along with a tool, called AGREE, for performing compositional verification. The goal of this paper is to show the benefits of a compositional verification approach applied to a realistic avionics system and to demonstrate the effectiveness of the AGREE tool in performing this analysis.",
+isbn="978-3-319-17524-9"
+}
+
+# Realizability in Assume-guarantee Reactive Systems 
+@InProceedings{10.1007/978-3-319-17524-9_13,
+author="Gacek, Andrew
+and Katis, Andreas
+and Whalen, Michael W.
+and Backes, John
+and Cofer, Darren",
+editor="Havelund, Klaus
+and Holzmann, Gerard
+and Joshi, Rajeev",
+title="Towards Realizability Checking of Contracts Using Theories",
+booktitle="NASA Formal Methods",
+year="2015",
+publisher="Springer International Publishing",
+address="Cham",
+pages="173--187",
+abstract="Virtual integration techniques focus on building architectural models of systems that can be analyzed early in the design cycle to try to lower cost, reduce risk, and improve quality of complex embedded systems. Given appropriate architectural descriptions and compositional reasoning rules, these techniques can be used to prove important safety properties about the architecture prior to system construction. Such proofs build from ``leaf-level'' assume/guarantee component contracts through architectural layers towards top-level safety properties. The proofs are built upon the premise that each leaf-level component contract is realizable; i.e., it is possible to construct a component such that for any input allowed by the contract assumptions, there is some output value that the component can produce that satisfies the contract guarantees. Without engineering support it is all too easy to write leaf-level components that can't be realized. Realizability checking for propositional contracts has been well-studied for many years, both for component synthesis and checking correctness of temporal logic requirements. However, checking realizability for contracts involving infinite theories is still an open problem. In this paper, we describe a new approach for checking realizability of contracts involving theories and demonstrate its usefulness on several examples.",
+isbn="978-3-319-17524-9"
+}
+
+@InProceedings{10.1007/978-3-319-29613-5_7,
+author="Katis, Andreas
+and Gacek, Andrew
+and Whalen, Michael W.",
+editor="Gurfinkel, Arie
+and Seshia, Sanjit A.",
+title="Machine-Checked Proofs for Realizability Checking Algorithms",
+booktitle="Verified Software: Theories, Tools, and Experiments",
+year="2016",
+publisher="Springer International Publishing",
+address="Cham",
+pages="110--123",
+abstract="Virtual integration techniques focus on building architectural models of systems that can be analyzed early in the design cycle to try to lower cost, reduce risk, and improve quality of complex embedded systems. Given appropriate architectural descriptions, assume/guarantee contracts, and compositional reasoning rules, these techniques can be used to prove important safety properties about the architecture prior to system construction. For these proofs to be meaningful, each leaf-level component contract must be realizable; i.e., it is possible to construct a component such that for any input allowed by the contract assumptions, there is some output value that the component can produce that satisfies the contract guarantees.",
+isbn="978-3-319-29613-5"
+}
+
+
+# Synthesis for Reactive Assume-guarantee reasoning
+@misc{katis2017synthesis,
+      title={Synthesis from Assume-Guarantee Contracts using Skolemized Proofs of Realizability}, 
+      author={Andreas Katis and Grigory Fedyukovich and Andrew Gacek and John Backes and Arie Gurfinkel and Michael W. Whalen},
+      year={2017},
+      eprint={1610.05867},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE}
+}
+
+@InProceedings{10.1007/978-3-319-89963-3_10,
+author="Katis, Andreas
+and Fedyukovich, Grigory
+and Guo, Huajun
+and Gacek, Andrew
+and Backes, John
+and Gurfinkel, Arie
+and Whalen, Michael W.",
+editor="Beyer, Dirk
+and Huisman, Marieke",
+title="Validity-Guided Synthesis of Reactive Systems from Assume-Guarantee Contracts",
+booktitle="Tools and Algorithms for the Construction and Analysis of Systems",
+year="2018",
+publisher="Springer International Publishing",
+address="Cham",
+pages="176--193",
+abstract="Automated synthesis of reactive systems from specifications has been a topic of research for decades. Recently, a variety of approaches have been proposed to extend synthesis of reactive systems from propositional specifications towards specifications over rich theories. We propose a novel, completely automated approach to program synthesis which reduces the problem to deciding the validity of a set of {\$}{\$}{\backslash}forall {\backslash}exists {\$}{\$}∀∃-formulas. In spirit of IC3/PDR, our problem space is recursively refined by blocking out regions of unsafe states, aiming to discover a fixpoint that describes safe reactions. If such a fixpoint is found, we construct a witness that is directly translated into an implementation. We implemented the algorithm on top of the JKind model checker, and exercised it against contracts written using the Lustre specification language. Experimental results show how the new algorithm outperforms JKind's already existing synthesis procedure based on k-induction and addresses soundness issues in the k-inductive approach with respect to unrealizable results.",
+isbn="978-3-319-89963-3"
+}
+
+# Contracts
+@article{10.1145/583852.581484,
+author = {Findler, Robert Bruce and Felleisen, Matthias},
+title = {Contracts for Higher-Order Functions},
+year = {2002},
+issue_date = {September 2002},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {37},
+number = {9},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/583852.581484},
+doi = {10.1145/583852.581484},
+abstract = {Assertions play an important role in the construction of robust software. Their use in programming languages dates back to the 1970s. Eiffel, an object-oriented programming language, wholeheartedly adopted assertions and developed the "Design by Contract" philosophy. Indeed, the entire object-oriented community recognizes the value of assertion-based contracts on methods.In contrast, languages with higher-order functions do not support assertion-based contracts. Because predicates on functions are, in general, undecidable, specifying such predicates appears to be meaningless. Instead, the functional languages community developed type systems that statically approximate interesting predicates.In this paper, we show how to support higher-order function contracts in a theoretically well-founded and practically viable manner. Specifically, we introduce λcon, a typed lambda calculus with assertions for higher-order functions. The calculus models the assertion monitoring system that we employ in DrScheme. We establish basic properties of the model (type soundness, etc.) and illustrate the usefulness of contract checking with examples from DrScheme's code base.We believe that the development of an assertion system for higher-order functions serves two purposes. On one hand, the system has strong practical potential because existing type systems simply cannot express many assertions that programmers would like to state. On the other hand, an inspection of a large base of invariants may provide inspiration for the direction of practical future type system research.},
+journal = {SIGPLAN Not.},
+month = sep,
+pages = {48–59},
+numpages = {12},
+keywords = {behavioral specifications, solfware reliability, higher-order functions, contracts, predicate typing}
+}
+
+# Contract Monitors
+@InProceedings{10.1007/978-3-642-28869-2_11,
+author="Dimoulas, Christos
+and Tobin-Hochstadt, Sam
+and Felleisen, Matthias",
+editor="Seidl, Helmut",
+title="Complete Monitors for Behavioral Contracts",
+booktitle="Programming Languages and Systems",
+year="2012",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="214--233",
+abstract="A behavioral contract in a higher-order language may invoke methods of unknown objects. Although this expressive power allows programmers to formulate sophisticated contracts, it also poses a problem for language designers. Indeed, two distinct semantics have emerged for such method calls, dubbed lax and picky. While lax fails to protect components in certain scenarios, picky may blame an uninvolved party for a contract violation.",
+isbn="978-3-642-28869-2"
+}
+
+# Static proof for contracts
+@article{10.1145/3158139,
+author = {Nguyundefinedn, Ph\'{u}c C. and Gilray, Thomas and Tobin-Hochstadt, Sam and Van Horn, David},
+title = {Soft Contract Verification for Higher-Order Stateful Programs},
+year = {2017},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {POPL},
+url = {https://doi.org/10.1145/3158139},
+doi = {10.1145/3158139},
+abstract = {Software contracts allow programmers to state rich program properties using the full expressive power of an object language. However, since they are enforced at runtime, monitoring contracts imposes significant overhead and delays error discovery. So contract veri cation aims to guarantee all or most of these properties ahead of time, enabling valuable optimizations and yielding a more general assurance of correctness. Existing methods for static contract verification satisfy the needs of more restricted target languages, but fail to address the challenges unique to those conjoining untyped, dynamic programming, higher-order functions, modularity, and statefulness. Our approach tackles all these features at once, in the context of the full Racket system—a mature environment for stateful, higher-order, multi-paradigm programming with or with- out types. Evaluating our method using a set of both pure and stateful benchmarks, we are able to verify 99.94% of checks statically (all but 28 of 49, 861).  Stateful, higher-order functions pose significant challenges for static contract verification in particular. In the presence of these features, a modular analysis must permit code from the current module to escape permanently to an opaque context (unspecified code from outside the current module) that may be stateful and therefore store a reference to the escaped closure. Also, contracts themselves, being predicates wri en in unrestricted Racket, may exhibit stateful behavior; a sound approach must be robust to contracts which are arbitrarily expressive and interwoven with the code they monitor. In this paper, we present and evaluate our solution based on higher-order symbolic execution, explain the techniques we used to address such thorny issues, formalize a notion of behavioral approximation, and use it to provide a mechanized proof of soundness.},
+journal = {Proc. ACM Program. Lang.},
+month = dec,
+articleno = {51},
+numpages = {30},
+keywords = {symbolic execution, Higher-order contracts}
+}
+
+# Contiguity Types
+@misc{contiguity,
+  title={Specifying Message Formats with Contiguity Types}, 
+  author={Konrad Slind},
+  year={2021}
+}
+
+@article{10.1145/3140587.3062358,
+author = {Bourke, Timothy and Brun, L\'{e}lio and Dagand, Pierre-\'{E}variste and Leroy, Xavier and Pouzet, Marc and Rieg, Lionel},
+title = {A Formally Verified Compiler for {L}ustre},
+year = {2017},
+issue_date = {June 2017},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {52},
+number = {6},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3140587.3062358},
+doi = {10.1145/3140587.3062358},
+abstract = { The correct compilation of block diagram languages like Lustre, Scade, and a discrete subset of Simulink is important since they are used to program critical embedded control software. We describe the specification and verification in an Interactive Theorem Prover of a compilation chain that treats the key aspects of Lustre: sampling, nodes, and delays. Building on CompCert, we show that repeated execution of the generated assembly code faithfully implements the dataflow semantics of source programs.  We resolve two key technical challenges. The first is the change from a synchronous dataflow semantics, where programs manipulate streams of values, to an imperative one, where computations manipulate memory sequentially. The second is the verified compilation of an imperative language with encapsulated state to C code where the state is realized by nested records. We also treat a standard control optimization that eliminates unnecessary conditional statements. },
+journal = {SIGPLAN Not.},
+month = jun,
+pages = {586–601},
+numpages = {16},
+keywords = {Synchronous Languages (Lustre), Interactive Theorem Proving (Coq), Verified Compilation}
+}
+
+@inproceedings{10.1145/1086228.1086261,
+author = {Cola\c{c}o, Jean-Louis and Pagano, Bruno and Pouzet, Marc},
+title = {A Conservative Extension of Synchronous Data-Flow with State Machines},
+year = {2005},
+isbn = {1595930914},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1086228.1086261},
+doi = {10.1145/1086228.1086261},
+abstract = {This paper presents an extension of a synchronous data-flow language such as Lustre with imperative features expressed in terms of powerful state machine \`{a} la SyncChart. This extension is fully conservative in the sense that all the programs from the basic language still make sense in the extended language and their semantics is preserved.From a syntactical point of view this extension consists in hierarchical state machines that may carry at each hierarchy level a bunch of equations. This proposition is an alternative to the joint use of Simulink and Stateflow but improves it by allowing a fine grain mix of both styles.The central idea of the paper is to base this extension on the use of clocks, translating imperative constructs into well clocked data-flow programs from the basic language. This clock directed approach is an easy way to define a semantics for the extension, it is light to implement in an existing compiler and experiments show that the generated code compete favorably with ad-hoc techniques. The proposed extension has been implemented in the ReLuC compiler of Scade/Lustre and in the Lucid Synchrone compiler.},
+booktitle = {Proceedings of the 5th ACM International Conference on Embedded Software},
+pages = {173–182},
+numpages = {10},
+keywords = {typing, clock calculus, compilation, heterogeneous systems, synchronous languages},
+location = {Jersey City, NJ, USA},
+series = {EMSOFT '05}
+}
+
+@InProceedings{10.1007/978-3-540-45212-6_10,
+author="Cola{\c{c}}o, Jean-Louis
+and Pouzet, Marc",
+editor="Alur, Rajeev
+and Lee, Insup",
+title="Clocks as First Class Abstract Types",
+booktitle="Embedded Software",
+year="2003",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="134--155",
+abstract="Clocks in synchronous data-flow languages are the natural way to define several time scales in reactive systems. They play a fundamental role during the specification of the system and are largely used in the compilation process to generate efficient sequential code. Based on the formulation of clocks as dependent types, the paper presents a simpler clock calculus reminiscent to ML type systems with first order abstract types {\`a} la Laufer {\&} Odersky. Not only this system provides clock inference, it shares efficient implementations of ML type systems and appears to be expressive enough for many real applications.",
+isbn="978-3-540-45212-6"
+}
+
+@inproceedings{10.1145/41625.41641,
+author = {Caspi, P. and Pilaud, D. and Halbwachs, N. and Plaice, J. A.},
+title = {LUSTRE: A Declarative Language for Real-Time Programming},
+year = {1987},
+isbn = {0897912152},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/41625.41641},
+doi = {10.1145/41625.41641},
+abstract = {LUSTRE is a synchronous data-flow language for programming systems which interact with their environments in real-time. After an informal presentation of the language, we describe its semantics by means of structural inference rules. Moreover, we show how to use this semantics in order to generate efficient sequential code, namely, a finite state automaton which represents the control of the program. Formal rules for program transformation are also presented.},
+booktitle = {Proceedings of the 14th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages},
+pages = {178–188},
+numpages = {11},
+location = {Munich, West Germany},
+series = {POPL '87}
+}
+
+@ARTICLE{97300,  author={Halbwachs, N. and Caspi, P. and Raymond, P. and Pilaud, D.},  journal={Proceedings of the IEEE},   title={The synchronous data flow programming language LUSTRE},   year={1991},  volume={79},  number={9},  pages={1305-1320},  doi={10.1109/5.97300}}
+
+@article{10.1145/1379023.1375674,
+author = {Biernacki, Dariusz and Cola\c{c}o, Jean-Louis and Hamon, Gregoire and Pouzet, Marc},
+title = {Clock-Directed Modular Code Generation for Synchronous Data-Flow Languages},
+year = {2008},
+issue_date = {July 2008},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {43},
+number = {7},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/1379023.1375674},
+doi = {10.1145/1379023.1375674},
+abstract = {The compilation of synchronous block diagrams into sequential imperative code has been addressed in the early eighties and can now be considered as folklore. However, separate, or modular, code generation, though largely used in existing compilers and particularly in industrial ones, has never been precisely described or entirely formalized. Such a formalization is now fundamental in the long-term goal to develop a mathematically certified compiler for a synchronous language as well as in simplifying existing implementations.This article presents in full detail the modular compilation of synchronous block diagrams into sequential code. We consider a first-order functional language reminiscent of LUSTRE, which it extends with a general n-ary merge operator, a reset construct, and a richer notion of clocks. The clocks are used to express activation of computations in the program and are specifically taken into account during the compilation process to produce efficient imperative code. We introduce a generic machine-based intermediate language to represent transition functions, and we present a concise clock-directed translation from the source to this intermediate language. We address the target code generation phase by describing a translation from the intermediate language to JAVA and C.},
+journal = {SIGPLAN Not.},
+month = jun,
+pages = {121–130},
+numpages = {10},
+keywords = {type systems, synchronous languages, real-time systems, semantics, compilation}
+}
+
+@article{10.1145/2345141.2248426,
+author = {G\'{e}rard, L\'{e}onard and Guatto, Adrien and Pasteur, C\'{e}dric and Pouzet, Marc},
+title = {A Modular Memory Optimization for Synchronous Data-Flow Languages: Application to Arrays in a Lustre Compiler},
+year = {2012},
+issue_date = {MAY 2012},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {47},
+number = {5},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/2345141.2248426},
+doi = {10.1145/2345141.2248426},
+abstract = {The generation of efficient sequential code for synchronous data-flow languages raises two intertwined issues: control and memory optimization. While the former has been extensively studied, for instance in the compilation of Lustre and Signal, the latter has only been addressed in a restricted manner. Yet, memory optimization becomes a pressing issue when arrays are added to such languages.This article presents a two-level solution to the memory optimization problem. It combines a compile-time optimization algorithm, reminiscent of register allocation, paired with language annotations on the source given by the designer. Annotations express in-place modifications and control where allocation is performed. Moreover, they allow external functions performing in-place modifications to be safely imported. Soundness of annotations is guaranteed by a semilinear type system and additional scheduling constraints. A key feature is that annotations for well-typed programs do not change the semantics of the language: removing them may lead to less efficient code but will not alter the semantics.The method has been implemented in a new compiler for a LUSTRE-like synchronous language extended with hierarchical automata and arrays. Experiments show that the proposed approach removes most of the unnecessary array copies, resulting in faster code that uses less memory.},
+journal = {SIGPLAN Not.},
+month = jun,
+pages = {51–60},
+numpages = {10},
+keywords = {synchronous languages, real-time systems, block-diagrams, semantics, compilation, type systems, optimization}
+}
+
+@misc{repo,
+  key = {verified-mon-flt-synthesis},
+  title  = "Synthesizing Verified Components for Cyber Assured Systems Engineering",
+  howpublished = "\url{https://github.com/ericmercer/verified-mon-flt-synthesis}"
+}
+
+@misc{fmide,
+  key = {fmide},
+  title  = "Formal Methods Workbench",
+  howpublished = "\url{https://github.com/loonwerks/formal-methods-workbench}"
+}
+
+@misc{phase2,
+  key = {phase2},
+  title  = "{CASE} {TA}6 Experimental Platform Models",
+  howpublished = "\url{https://github.com/loonwerks/case-ta6-experimental-platform-models}"
+}
+
+@misc{camkes,
+  key = {camkes},
+  title  = "{CASE} {TA}6 Platform Assessemnt {CAMKES} apps",
+  howpublished = "\url{https://github.com/loonwerks/case-ta6-platform-assessment-camkes-apps}"
+}
+
+@misc{cakeml,
+  key = {cakeml},
+  title  = "{C}ake{ML}",
+  howpublished = "\url{https://cakeml.org/}"
+}
+
+@inproceedings{gearcase2020,
+title        = {Cyber Attack Grammars for Risk-Cost Analysis},
+author       = {Patten, T. and Mitchell, D. and Call, C.},
+booktitle    = {Proceedings of the 15th International Conference on Cyber Warfare and Security},
+series       = "",
+volume       = "",
+pages        = "",
+year         = {2020},
+publisher    = "",
+address      = {Norfolk, VA}
+}
+
+@article{dcrypps2019,
+  author    = {Robert Laddaga and
+               Paul Robertson and
+               Howard E. Shrobe and
+               Dan Cerys and
+               Prakash Manghwani and
+               Patrik Meijer},
+  title     = {Deriving Cyber-security Requirements for Cyber Physical Systems},
+  journal   = {CoRR},
+  volume    = {abs/1901.01867},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1901.01867},
+  archivePrefix = {arXiv},
+  eprint    = {1901.01867},
+  timestamp = {Mon, 25 Jan 2021 15:38:17 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1901-01867.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@techreport{aadl,
+  author        = {SAE},
+  title         = {{A}rchitecture {A}nalysis and {D}esign {L}anguage ({AADL})},
+  number =        {AS-5506},
+  institution =   {SAE International},
+  address =       "",
+  url           = {https://www.sae.org/standards/content/as5506a/},
+  year          = {2009},
+}
+
+@inproceedings{slind-hcss2020,
+title        = {Take a {SEAT}: {S}ecurity-{E}nhancing {A}rchitectural {T}ransformations},
+author       = {Konrad Slind},
+booktitle    = {Proceedings of the 20th High Confidence Software and Systems Conference},
+series       = "",
+volume       = "",
+pages        = "",
+year         = {2020},
+publisher    = "",
+address      = "",
+url           = {https://cps-vo.org/hcss2020/slind}
+}
+
+@article{agree2013,
+  author    = {Michael W. Whalen and
+               Andrew Gacek and
+               Darren D. Cofer and
+               Anitha Murugesan and
+               Mats Per Erik Heimdahl and
+               Sanjai Rayadurgam},
+  title     = {Your "What" Is My "How": Iteration and Hierarchy in System Design},
+  journal   = {{IEEE} {S}oftware},
+  volume    = {30},
+  number    = {2},
+  pages     = {54--60},
+  year      = {2013},
+  url       = {https://doi.org/10.1109/MS.2012.173},
+  doi       = {10.1109/MS.2012.173},
+  timestamp = {Mon, 08 Jun 2020 22:31:40 +0200},
+  biburl    = {https://dblp.org/rec/journals/software/WhalenGCMHR13.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@manual{HAMR, 
+ key = {HAMR},
+ organization = {Kansas State University},
+ title = {Sireum {HAMR}: High Assurance Modeling and Rapid Engineering for Embedded Systems},
+ url = {http://hamr.sireum.org/},
+ year = {2021}
+}
+
+@inproceedings{sel4-2009,
+  author    = {Gerwin Klein and
+               Kevin Elphinstone and
+               Gernot Heiser and
+               June Andronick and
+               David Cock and
+               Philip Derrin and
+               Dhammika Elkaduwe and
+               Kai Engelhardt and
+               Rafal Kolanski and
+               Michael Norrish and
+               Thomas Sewell and
+               Harvey Tuch and
+               Simon Winwood},
+  editor    = {Jeanna Neefe Matthews and Thomas E. Anderson},
+  title     = {seL4: formal verification of an {OS} kernel},
+  booktitle = {Proceedings of the 22nd {ACM} Symposium on Operating Systems Principles 2009, {SOSP} 2009, Big Sky, Montana, USA, October 11-14, 2009},
+  pages     = {207--220},
+  publisher = {{ACM}},
+  year      = {2009},
+  url       = {https://doi.org/10.1145/1629575.1629596},
+  doi       = {10.1145/1629575.1629596},
+  timestamp = {Tue, 06 Nov 2018 16:59:32 +0100},
+  biburl    = {https://dblp.org/rec/conf/sosp/KleinEHACDEEKNSTW09.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inProceedings{formal-filter-synth-langsec,
+  author     = {David S. Hardin and Konrad L. Slind},
+  title      = {Formal Synthesis of Filter Components for Use in Security-Enhancing Architectural Transformations},
+  booktitle  = {Proceedings of the Seventh Workshop on Language-Theoretic Security, 42nd IEEE Symposium and Workshops on Security and Privacy ({L}ang{S}ec 2021)},
+  year       = {2021},
+  month      = {May},
+  note       = {to appear}
+}
+
+@inProceedings{contiguity-types,
+  author     = {Konrad L. Slind},
+  title      = {Specifying Message Formats with {C}ontiguity {T}ypes},
+  booktitle  = {Proceedings of the Twelfth International Conference on Interactive Theorem Proving (ITP 2021)},
+  year       = {2021},
+  month      = {June},
+  note       = {to appear}
+}
+
+@inProceedings{case-verified-filter,
+  author    = {David S. Hardin and Konrad L. Slind and Johannes {\AA}man Pohjola and Michael Sproul},
+  title     = {Synthesis of Verified Architectural Components for Autonomy
+  Hosted on a Verified Microkernel},
+  booktitle = {Proceedings of the 53rd Hawaii International Conference on System Sciences},
+  pages     = {6365--6374},
+  month     = {January},
+  year      = {2020}
+}
+
+@article{cakeml-space-cost,
+  author    = {Alejandro G{\'{o}}mez-Londo{\~n}o and
+               Johannes {\AA}man Pohjola and
+               Hira Taqdees Syeda and
+               Magnus O. Myreen and
+               Yong Kiam Tan},
+  title     = {Do you have space for dessert? A verified space cost semantics for {CakeML} programs},
+  journal   = {Proc. ACM Program. Lang. (OOPSLA)},
+  volume    = {4},
+  pages     = {204:1--204:29},
+  year      = {2020},
+  url       = {https://cakeml.org/oopsla20.pdf},
+  doi       = {10.1145/3428272}}
+
+@inProceedings{resolute-destion,
+  author     = {Isaac Amundson and Darren Cofer},
+  title      = {Resolute Assurance Arguments for Cyber Assured Systems Engineering},
+  booktitle  = {Design Automation for Cyber-Physical Systems and Internet of Things (DESTION 2021)},
+  year       = {2021},
+  month      = {May},
+  note       = {to appear}
+ }
+  
+@inproceedings{uxas,
+  author    = {Derek B. Kingston and
+               Steven Rasmussen and
+               Laura R. Humphrey},
+  title     = {Automated {UAV} tasks for search and surveillance},
+  booktitle = {2016 {IEEE} Conference on Control Applications, {CCA} 2016, Buenos
+               Aires, Argentina, September 19-22, 2016},
+  pages     = {1--8},
+  publisher = {{IEEE}},
+  year      = {2016},
+  biburl    = {https://dblp.org/rec/conf/IEEEcca/KingstonRH16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{sel4-cacm,
+  author    = {Gerwin Klein and
+               June Andronick and
+               Kevin Elphinstone and
+               Gernot Heiser and
+               David Cock and
+               Philip Derrin and
+               Dhammika Elkaduwe and
+               Kai Engelhardt and
+               Rafal Kolanski and
+               Michael Norrish and
+               Thomas Sewell and
+             Harvey Tuch and
+               Simon Winwood},
+  title     = {{seL4}: formal verification of an operating-system kernel},
+  journal   = {Communications of the {ACM}},
+  volume    = {53},
+  number    = {6},
+  pages     = {107--115},
+  year      = {2010},
+  url       = {http://doi.acm.org/10.1145/1743546.1743574},
+  doi       = {10.1145/1743546.1743574},
+  timestamp = {Fri, 11 Jun 2010 14:44:16 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/cacm/KleinAEHCDEEKNSTW10},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{camkes-jss,
+  author    = {Ihor Kuz and Yan Liu and Ian Gorton and Gernot Heiser},
+  title     = {{CAmkES}: {A} component model for secure microkernel-based embedded
+               systems},
+  journal   = {Journal of Systems and Software},
+  volume    = {80},
+  number    = {5},
+  pages     = {687--699},
+  year      = {2007},
+  url       = {https://doi.org/10.1016/j.jss.2006.08.039},
+  doi       = {10.1016/j.jss.2006.08.039},
+  timestamp = {Fri, 28 Jul 2017 11:57:39 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/jss/KuzLGH07},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inProceedings{attestation-copland,
+  author     = {Adam Petz and Perry Alexander},
+  title      = {An Infrastructure for Faithful Execution of Remote Attestation Protocols},
+  booktitle  = {Proceedings of the 13th {NASA} Formal Methods Symposium (NFM 2021)},
+  year       = {2021},
+  month      = {May},
+  note       = {to appear}
+}
+
+@misc{case,
+  key = {case},
+  title  = "{CASE}: {C}yber {A}ssured {S}ystems {E}ngineering",
+  howpublished = "\url{http://loonwerks.com/projects/case}"
+}
+
+@misc{caas,
+  key = {caas},
+  title  = "{Common Avionics Architecture System}",
+  howpublished = "\url{https://www.collinsaerospace.com/what-we-do/Helicopters/Rotary-Wing/Common-Avionics-Architecture-System}"
+}

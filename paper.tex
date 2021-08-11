@@ -1,0 +1,195 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{paralist}
+\usepackage{graphicx}
+\graphicspath{{./figs/}} 
+\usepackage{listings}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{flushend}
+\usepackage{hyperref}
+% \usepackage[firstpage]{draftwatermark}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{light-gray}{gray}{0.88}
+
+\lstdefinestyle{myML}
+{frame=none,
+  basicstyle=\ttfamily,
+  language=ML,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=false,
+  breakatwhitespace=true,
+  tabsize=2,
+  linewidth=2\linewidth
+}
+
+\lstdefinestyle{agree}
+{frame=none,
+  basicstyle=\ttfamily,
+  language=ML,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=false,
+  breakatwhitespace=true,
+  tabsize=2,
+  linewidth=2\linewidth,
+  morekeywords={eq, bool, guarantee, assume, true, false, pre, not, and, or, property, const}
+}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\newcommand{\konst}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\imp}{\Rightarrow}
+\newcommand{\lval}{\ensuremath{\mathit{lval}}}
+\newcommand{\set}[1]{\ensuremath{\{ {#1} \}}}
+\newcommand{\kstar}[1]{\ensuremath{{#1}^{*}}}
+\newcommand{\Lang}[1]{\ensuremath{{\mathcal L}({#1})}}
+\newcommand{\LangTheta}[1]{\ensuremath{{\mathcal L}_{\theta}({#1})}}
+\newcommand{\itelse}[3]{\mbox{$\mathtt{if}\ {#1}\ \mathtt{then}\ {#2}\ \mathtt{else}\ {#3}$}}
+
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+
+% Latex trickery for infix div operator, from stackexchange
+
+\makeatletter
+\newcommand*{\bdiv}{%
+  \nonscript\mskip-\medmuskip\mkern5mu%
+  \mathbin{\operator@font div}\penalty900\mkern5mu%
+  \nonscript\mskip-\medmuskip
+}
+\makeatother
+
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\etc}{\textit{etc.}}
+\newcommand{\adhoc}{\textit{ad hoc}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\begin{document}
+\title{
+  Synthesizing Verified Cyber Assured Components
+  \thanks{DISTRIBUTION STATEMENT A.  Approved for public release.}
+}
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{
+\IEEEauthorblockN{Eric Mercer}
+\IEEEauthorblockA{Department of Computer Science\\
+Brigham Young University\\
+Provo, Utah}
+\and
+\IEEEauthorblockN{
+Konrad Slind, Isaac Amundson, Darren Cofer}
+\IEEEauthorblockA{
+Applied Research and Technology\\
+Collins Aerospace\\
+Minneapolis, Minnesota}
+\and
+\IEEEauthorblockN{
+Junaid Babar, David Hardin}
+\IEEEauthorblockA{
+Applied Research and Technology\\
+Collins Aerospace\\
+Cedar Rapids, Iowa}
+}
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+\maketitle
+
+\IEEEpeerreviewmaketitle
+
+\section{Contiguity Types}
+\input{contig}
+
+\section{Semantics}
+\input{system}
+
+%\section*{Acknowledgments}
+%This work was sponsored in part by the Defense Advanced Research
+%Projects Agency (DARPA).
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command,
+% and the \label for the overall figure must come after \caption.
+% \hfil is used as a separator to get equal spacing.
+% Watch out that the combined width of all the subfigures on a 
+% line do not exceed the text width or a line break will occur.
+%
+%\begin{figure*}[!t]
+%\centering
+%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
+%\label{fig_second_case}}
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat[]), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
+% labels, the optional argument to \subfloat must be present. If a
+% subcaption is not desired, just leave its contents blank,
+% e.g., \subfloat[].
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{paper}
+
+% \appendix
+% \section{Contiguity Types}
+% \input{contig} 
+
+% \section{System Model and Semantics}
+% \input{system}
+
+\end{document}
+
+
