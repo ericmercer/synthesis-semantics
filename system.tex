@@ -33,11 +33,20 @@
 \label{fig:syntax}
 \end{figure}
 
-The specification language for a high-assurance component is in \figref{fig:syntax}. A specification defines the inputs, outputs, local values, and guarantees for each output. A type $\tau$ is a contiguity type, and $(f : \tau)\ldots$ means zero or more repetition (e.g., Kleene star). An $\lval$ must eventually resolve to something that can be assigned. The expression language divides out Boolean expressions to simplify the semantics but is otherwise typical. The \konst{Loc} and \konst{bLoc} refer to the value of an $\lval$, while \konst{nLit} and \konst{bLit} indicate a literal. The language includes the initialization ($\rightarrow$), \konst{pre}, and if-then-else (\konst{ite}) operators.
+The specification language for a high-assurance component is in \figref{fig:syntax}. 
+A specification defines the inputs, outputs, local values, and guarantees for each output. 
+A type $\tau$ is a contiguity type, and $(f : \tau)\ldots$ means zero or more repetition (e.g., Kleene star). 
+An $\lval$ must eventually resolve to something that can be assigned. 
+The expression language divides out Boolean expressions to simplify the semantics but is otherwise typical. 
+The \konst{Loc} and \konst{bLoc} refer to the value of an $\lval$, while \konst{nLit} and \konst{bLit} indicate a literal. 
+The language includes the initialization ($\rightarrow$), \konst{pre}, and if-then-else (\konst{ite}) operators.
 
-Change the following paragraph and preceding paragraphs to define the specification as the core language with a well defined normal form where expressions are flat, lvals are unique etc. It takes care of all the normal semantic checks related to types, dependency order, etc. Anything in the core language has normal form and is perfect.
+Change the following paragraph and preceding paragraphs to define the specification as the core language with a well defined normal form where expressions are flat, lvals are unique etc. 
+It takes care of all the normal semantic checks related to types, dependency order, etc. 
+Anything in the core language has normal form and is perfect.
 
-The semantics are only defined for \emph{well-formed} specifications. A specification is well-formed if and only if
+The semantics are only defined for \emph{well-formed} specifications. 
+A specification is well-formed if and only if
 \begin{compactenum}
 \item Every $\lval$ is unique;
 \item the \konst{eq} list is in dependency order and the expressions are acyclic;
@@ -51,7 +60,12 @@ These checks are part of the synthesis but omitted to simplify the presentation.
 
 An environment, $\theta: \lval \mapsto \konst{string}$ binds L-values to strings. 
 
-The well-formed assumption enables the use of a single global environment for the semantics. The semantics are synchronous data-flow on a single clock defined over a sequences of environments where $\theta^i$ is the $i^\mathrm{th}$ environment in the stream. Expression evaluation is defined in the context of this environment stream as shown is \figref{fig:eval}. Here, $\konst{eval}\; i\; e$ carries with it the index of the environment to be used for the expression. $\Delta : \konst{string} \to \mathbb{N}$ binds constant names to numbers. Functions $\konst{toN}:\konst{string}\to\mathbb{N}$ and $\konst{toB}:\konst{string}\to\konst{bool}$ interpret byte sequences to numbers and booleans, respectively. 
+The well-formed assumption enables the use of a single global environment for the semantics. 
+The semantics are synchronous data-flow on a single clock defined over a sequences of environments where $\theta^i$ is the $i^\mathrm{th}$ environment in the stream. 
+Expression evaluation is defined in the context of this environment stream as shown is \figref{fig:eval}. 
+Here, $\konst{eval}\; i\; e$ carries with it the index of the environment to be used for the expression. 
+$\Delta : \konst{string} \to \mathbb{N}$ binds constant names to numbers. 
+Functions $\konst{toN}:\konst{string}\to\mathbb{N}$ and $\konst{toB}:\konst{string}\to\konst{bool}$ interpret byte sequences to numbers and booleans, respectively. 
 
 \begin{figure*}
 \[
@@ -90,9 +104,17 @@ The well-formed assumption enables the use of a single global environment for th
 \label{fig:eval}
 \end{figure*}
 
-Each environment in the stream is initially partial meaning that it only contains mappings for the inputs. \emph{Stepping} the specification updates the current environment and checks the invariance of the guarantees. In other words, at the $i^\mathrm{th}$ step, $\theta^i$ is updated with the result of the sequential evaluation of the \konst{eq}-statements in the specification and then the guarantees are checked for invariance. 
+Each environment in the stream is initially partial meaning that it only contains mappings for the inputs. 
+\emph{Stepping} the specification updates the current environment and checks the invariance of the guarantees. 
+In other words, at the $i^\mathrm{th}$ step, $\theta^i$ is updated with the result of the sequential evaluation of the \konst{eq}-statements in the specification and then the guarantees are checked for invariance. 
 
-The notation $(\lval \mapsto \mathit{slice}) \bullet \theta$ denotes the addition of binding $\lval \mapsto \mathit{slice}$ to $\theta$. Create an eval function for \konst{eq}-statement. Map it to the list of statements. Create a similar function for the guarantees with its map that fails if invariance does not hold. Define the language of the specification using the contiguity notation. Need to munge all the types into a single $\tau$, but the gist is the language is any finite stream possible that conform to the input specification are the result of the eq-statements, and are invariant. The set is prefix closed (trace theory).
+The notation $(\lval \mapsto \mathit{slice}) \bullet \theta$ denotes the addition of binding $\lval \mapsto \mathit{slice}$ to $\theta$.
+Create an eval function for \konst{eq}-statement.
+Map it to the list of statements.
+Create a similar function for the guarantees with its map that fails if invariance does not hold.
+Define the language of the specification using the contiguity notation.
+Need to munge all the types into a single $\tau$, but the gist is the language is any finite stream possible that conform to the input specification are the result of the eq-statements, and are invariant.
+The set is prefix closed (trace theory).
 
 \begin{comment}
 There are 3 possible forms expected for a code guarantee, depending
